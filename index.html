@@ -1,0 +1,1059 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEMON: Gotta Catch Them All</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="midtermsAraneta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+</head>
+    <body>
+        <div class="intro">
+                <div class="pokeball">
+                    <img class="ball" src="images/crystalball.png" draggable="false">
+                    <img class="ball" src="images/greatball.png" draggable="false">
+                    <img class="ball" src="images/moonball.png" draggable="false">
+                </div>
+        </div>
+        <script src="midtermsAraneta.js" defer></script>
+        <script src="modifiedWeb.js" defer></script>
+        <section class="home">
+            <video autoplay loop muted plays-inline class="background">
+                <source src="images/background2.mp4" type="video/mp4">
+            </video>
+            <audio id="sound" loop src="images/sound.mp3"></audio>
+            <audio class="cry" data-source="p1" src="images/sprigatitocry.mp3" id="p1"></audio>
+            <audio class="cry" data-source="p1.1" src="images/floragatocry.mp3" id="p1.1"></audio>
+            <audio class="cry" data-source="p1.2" src="images/meowscaradacry.mp3" id="p1.2"></audio>
+            <audio class="cry" data-source="p2" src="images/petililcry.mp3" id="p2"></audio>
+            <audio class="cry" data-source="p2.1" src="images/lilligantcry.mp3" id="p2.1"></audio>
+            <audio class="cry" data-source="p3" src="images/buizelccry.mp3" id="p3"></audio>
+            <audio class="cry" data-source="p3.1" src="images/floatzelcry.mp3" id="p3.1"></audio>
+            <audio class="cry" data-source="p4" src="images/froakiecry.mp3" id="p4"></audio>
+            <audio class="cry" data-source="p4.1" src="images/frogadiercry.mp3" id="p4.1"></audio>
+            <audio class="cry" data-source="p4.2" src="images/greninjacry.mp3" id="p4.2"></audio>
+            <audio class="cry" data-source="p5" src="images/cubonecry.mp3" id="p5"></audio>
+            <audio class="cry" data-source="p5.1" src="images/marowakcry.mp3" id="p5.1"></audio>
+            <audio class="cry" data-source="p6" src="images/phanpycry.mp3" id="p6"></audio>
+            <audio class="cry" data-source="p6.1" src="images/donphancry.mp3" id="p6.1"></audio>
+            <audio class="cry" data-source="p7" src="images/shinxcry.mp3" id="p7"></audio>
+            <audio class="cry" data-source="p7.1" src="images/luxiocry.mp3" id="p7.1"></audio>
+            <audio class="cry" data-source="p7.2" src="images/luxraycry.mp3" id="p7.2"></audio>
+            <audio class="cry" data-source="p8" src="images/pichucry.mp3" id="p8"></audio>
+            <audio class="cry" data-source="p8.1" src="images/pikachucry.mp3" id="p8.1"></audio>
+            <audio class="cry" data-source="p8.2" src="images/raichucry.mp3" id="p8.2"></audio>
+            <audio class="cry" data-source="p9" src="images/vulpixcry.mp3" id="p9"></audio>
+            <audio class="cry" data-source="p9.1" src="images/ninetalescry.mp3" id="p9.1"></audio>
+            <audio class="cry" data-source="p10" src="images/scorbunnycry.mp3" id="p10"></audio>
+            <audio class="cry" data-source="p10.1" src="images/rabootcry.mp3" id="p10.1"></audio>
+            <audio class="cry" data-source="p10.2" src="images/cinderacecry.mp3" id="p10.2"></audio>
+            <div class="logo">
+                <img  src="images/logo.png" draggable="false">
+            </div>
+            <i class="fi fi-rr-music-note" onclick="playStop(this)"></i>
+            <img class="background2" src="images/background2.png" draggable="false">
+            <img class="crystal-ball" src="images/crystalball.png" draggable="false">
+            <div class="image-containers">
+                <div class="container" data-name="p1">
+                    <img class="pokemon" src="images/sprigatito.png" draggable="false">
+                    <div class="symbol-container1">
+                        <img class="symbol" src="images/grass.png" draggable="false">  
+                    </div>
+                </div>
+                <div class="container" data-name="p2">
+                    <img class="pokemon" src="images/petilil.png" draggable="false">
+                    <div class="symbol-container1">
+                        <img class="symbol2" src="images/grass.png" draggable="false">
+                    </div>
+                </div>
+                <div class="container" data-name="p3">
+                    <img class="pokemon" src="images/buizel.png" draggable="false">
+                    <div class="symbol-container2">
+                        <img class="symbol3" src="images/water.png" draggable="false">
+                    </div>
+                </div>
+                <div class="container" data-name="p4">
+                    <img class="pokemon" src="images/froakie.png" draggable="false">
+                    <div class="symbol-container2">
+                        <img class="symbol4" src="images/water.png" draggable="false">  
+                    </div>
+                </div>
+                <div class="container" data-name="p5"> 
+                    <img class="pokemon" src="images/cubone.png" draggable="false">
+                    <div class="symbol-container3">
+                        <img class="symbol5" src="images/ground.png" draggable="false">
+                    </div>
+                </div>
+                <div class="container" data-name="p6">
+                    <img class="pokemon" src="images/phanpy.png" draggable="false">
+                    <div class="symbol-container3">
+                        <img class="symbol6" src="images/ground.png" draggable="false">
+                    </div>
+                </div>
+                <div class="container" data-name="p7">
+                    <img class="pokemon" src="images/shinx.png" draggable="false">
+                    <div class="symbol-container3">
+                        <img class="symbol7" src="images/electric.png" draggable="false">
+                    </div>
+                </div>
+                <div class="container" data-name="p8">
+                    <img class="pokemon" src="images/pichu.png" draggable="false">
+                    <div class="symbol-container3">
+                        <img class="symbol8" src="images/electric.png" draggable="false">
+                    </div>
+                </div>
+                <div class="container" data-name="p9">
+                    <img class="pokemon" src="images/vulpix.png" draggable="false">
+                    <div class="symbol-container2">
+                        <img class="symbol9" src="images/fire.png" draggable="false">
+                    </div>
+                </div>
+                <div class="container" data-name="p10">
+                    <img class="pokemon" src="images/scorbunny.png" draggable="false">
+                    <div class="symbol-container2">
+                        <img class="symbol10" src="images/fire.png" draggable="false">
+                    </div>
+                </div>
+            </div>
+            <div class="popup-container">
+                <div class="popup" data-target="p1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/sprig-evo1.png" draggable="false">
+                        <img class="elements1" src="images/grass.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>SPRIGATITO</h1>
+                        </div>
+                        <h2 id="ev1">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                Its fluffy fur is similar in composition to plants. This Pokémon frequently washes its face to keep it from drying out.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header1">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 04"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGrass Cat</p><br>
+                            <p class="data-header1">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>9.0 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOvergrow & Protein</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header1">TYPE</p><br>
+                            <P>Grass</P><br>
+                            <p class="data-header1">WEAKNESSES</p><br>
+                            <p>Fire Flying Ice Poision Bug</p><br>
+                        </div>
+                        <div class="text-container4 evo1">
+                            <div class="evolve-container">
+                                <img style="pointer-events: none;" src="images/sprig-evo1.png" draggable="false">
+                                <img data-name="p1.1" src="images/floragato.png" draggable="false">
+                                <img data-name="p1.2" src="images/meowscarada.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p1.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/floragato.png" draggable="false">
+                        <img class="elements1" src="images/grass.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>FLORAGATO</h1>
+                        </div>
+                        <h2 id="ev1">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                Floragato deftly wields the vine hidden beneath its long fur, slamming the hard flower bud against its opponents.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header1">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>2' 11"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGrass Cat</p><br>
+                            <p class="data-header1">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>26.9 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOvergrow & Protein</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header1">TYPE</p><br>
+                            <P>Grass</P><br>
+                            <p class="data-header1">WEAKNESSES</p><br>
+                            <p>Fire Flying Ice Poision Bug</p><br>
+                        </div>
+                        <div class="text-container4 evo1">
+                            <div class="evolve-container">
+                                <img data-name="p1" src="images/sprig-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/floragato.png" draggable="false">
+                                <img data-name="p1.2" src="images/meowscarada.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p1.2">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/meowscarada.png" draggable="false">
+                        <img class="elements1" src="images/grass.png" draggable="false">
+                        <div class="name-container">  
+                            <h1 id="h1-1">MEOWSCARADA</h1>
+                        </div>
+                        <h2 id="ev1">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header1">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>4' 11"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMagician</p><br>
+                            <p class="data-header1">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>68.8 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOvergrow & Protein</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header1">TYPE</p><br>
+                            <P>Grass</P><br>
+                            <p class="data-header1">WEAKNESSES</p><br>
+                            <p>Fire Flying Ice Poision Bug</p><br>
+                        </div>
+                        <div class="text-container4 evo1">
+                            <div class="evolve-container">
+                                <img data-name="p1" src="images/sprig-evo1.png" draggable="false">
+                                <img data-name="p1.1" src="images/floragato.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/meowscarada.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p2">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/pet-evo1.png" draggable="false">
+                        <img class="elements1" src="images/grass.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>PETILIL</h1>
+                        </div>
+                        <h2 id="ev1">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                The leaves on its head grow right back even if they fall out. These bitter leaves refresh those who eat them.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header1">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 08"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBulb</p><br>
+                            <p class="data-header1">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>14.6 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspChlorophyll & Own Tempo</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header1">TYPE</p><br>
+                            <P>Grass</P><br>
+                            <p class="data-header1">WEAKNESSES</p><br>
+                            <p>Fire Flying Ice Poision Bug</p><br>
+                        </div>
+                        <div class="text-container4 evo1">
+                            <div class="evolve-container">
+                                <img style="pointer-events: none;" src="images/pet-evo1.png" draggable="false">
+                                <img data-name="p2.1" src="images/lilligant.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p2.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/lilligant.png" draggable="false">
+                        <img class="elements1" src="images/grass.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>LILLIGANT</h1>
+                        </div>
+                        <h2 id="ev1">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                The fragrance of the garland on its head has a relaxing effect, but taking care of it is very difficult.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header1">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>3' 07"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFlowering</p><br>
+                            <p class="data-header1">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>35.9 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspChlorophyll & Own Tempo</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header1">TYPE</p><br>
+                            <P>Grass</P><br>
+                            <p class="data-header1">WEAKNESSES</p><br>
+                            <p>Fire Flying Ice Poision Bug</p><br>
+                        </div>
+                        <div class="text-container4 evo1">
+                            <div class="evolve-container">
+                                <img data-name="p2" src="images/pet-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/lilligant.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p3">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/bez-evo1.png" draggable="false">
+                        <img class="elements2" src="images/water.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>BUIZEL</h1>
+                        </div>
+                        <h2 id="ev2">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                It spins its two tails like a screw to propel itself through water. The tails also slice clinging seaweed.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header2">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>2' 04"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSea Weasel</p><br>
+                            <p class="data-header2">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>65.0 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSwift Swim</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header2">TYPE</p><br>
+                            <P>Water</P><br>
+                            <p class="data-header2">WEAKNESSES</p><br>
+                            <p>Grass Electric</p><br>
+                        </div>
+                        <div class="text-container4 evo2">
+                            <div class="evolve-container">
+                                <img style="pointer-events: none;" src="images/bez-evo1.png" draggable="false">
+                                <img data-name="p3.1" src="images/floatzel.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p3.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/floatzel.png" draggable="false">
+                        <img class="elements2" src="images/water.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>FLOATZEL</h1>
+                        </div>
+                        <h2 id="ev2">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                With its flotation sac inflated, it can carry people on its back. It deflates the sac before it dives.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header2">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>3' 07"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSea Weasel</p><br>
+                            <p class="data-header2">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>73.9 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSwift Swim</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header2">TYPE</p><br>
+                            <P>Water</P><br>
+                            <p class="data-header2">WEAKNESSES</p><br>
+                            <p>Grass Electric</p><br>
+                        </div>
+                        <div class="text-container4 evo2">
+                            <div class="evolve-container">
+                                <img data-name="p3" src="images/bez-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/floatzel.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p4">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/fro-evo1.png" draggable="false">
+                        <img class="elements2" src="images/water.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>FROAKIE</h1>
+                        </div>
+                        <h2 id="ev2">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            
+                            <p>
+                                It secretes flexible bubbles from its chest and back. The bubbles reduce the damage it would otherwise take when attacked.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header2">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 00"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBubble Frog</p><br>
+                            <p class="data-header2">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>15.4 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTorrent</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header2">TYPE</p><br>
+                            <P>Water</P><br>
+                            <p class="data-header2">WEAKNESSES</p><br>
+                            <p>Grass Electric</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo2">
+                                <img style="pointer-events: none;" src="images/fro-evo1.png" draggable="false">
+                                <img data-name="p4.1" src="images/frogadier.png" draggable="false">
+                                <img data-name="p4.2" src="images/greninja.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p4.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img1" src="images/frogadier.png" draggable="false">
+                        <img class="elements2" src="images/water.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>FROGADIER</h1>
+                        </div>
+                        <h2 id="ev2">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            
+                            <p>
+                                It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header2">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>2' 00"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBubble Frog</p><br>
+                            <p class="data-header2">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>24.0 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTorrent</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header2">TYPE</p><br>
+                            <P>Water</P><br>
+                            <p class="data-header2">WEAKNESSES</p><br>
+                            <p>Grass Electric</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo2">
+                                <img data-name="p4" src="images/fro-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/frogadier.png" draggable="false">
+                                <img data-name="p4.2" src="images/greninja.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p4.2">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img1" src="images/greninja.png" draggable="false">
+                        <img class="elements2" src="images/water.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>GRENINJA</h1>
+                        </div>
+                        <h2 id="ev2">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            
+                            <p>
+                                It creates throwing stars out of compressed water. When it spins them and throws them at high speed, these stars can split metal in two.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header2">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>4' 11"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNinja</p><br>
+                            <p class="data-header2">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>88.2 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTorrent</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header2">TYPE</p><br>
+                            <P>Water</P><br>
+                            <p class="data-header2">WEAKNESSES</p><br>
+                            <p>Grass Electric</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo2">
+                                <img data-name="p4" src="images/fro-evo1.png" draggable="false">
+                                <img data-name="p4.1" src="images/frogadier.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/greninja.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p5">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/cub-evo1.png" draggable="false">
+                        <img class="elements3" src="images/ground.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>CUBONE</h1>
+                        </div>
+                        <h2 id="ev3">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                When the memory of its departed mother brings it to tears, its cries echo mournfully within the skull it wears on its head.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header3">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 04"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLonely</p><br>
+                            <p class="data-header3">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>14.3 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRock Head & Lightning Rod</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header3">TYPE</p><br>
+                            <P>Ground</P><br>
+                            <p class="data-header3">WEAKNESSES</p><br>
+                            <p>Water Grass Ice</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo3">
+                                <img style="pointer-events: none;" src="images/cub-evo1.png" draggable="false">
+                                <img data-name="p5.1" src="images/marowak.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p5.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/marowak.png" draggable="false">
+                        <img class="elements3" src="images/ground.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>MAROWAK</h1>
+                        </div>
+                        <h2 id="ev3">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                This Pokémon overcame its sorrow to evolve a sturdy new body. Marowak faces its opponents bravely, using a bone as a weapon.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header3">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>3' 03"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBone Keeper</p><br>
+                            <p class="data-header3">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>99.2 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRock Head & Lightning Rod</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header3">TYPE</p><br>
+                            <P>Ground</P><br>
+                            <p class="data-header3">WEAKNESSES</p><br>
+                            <p>Water Grass Ice</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo3">
+                                <img data-name="p5" src="images/cub-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/marowak.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p6">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/phan-evo1.png" draggable="false">
+                        <img class="elements3" src="images/ground.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>PHANPY</h1>
+                        </div>
+                        <h2 id="ev3">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                This Pokémon lives and nests on a riverbank. After playing in the mud, it won’t be able to settle down unless it washes its body.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header3">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 08"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLong Nose</p><br>
+                            <p class="data-header3">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>73.9 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPickup</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header3">TYPE</p><br>
+                            <P>Ground</P><br>
+                            <p class="data-header3">WEAKNESSES</p><br>
+                            <p>Water Grass Ice</p><br>
+                        </div>
+                        <div class="text-container4 evo3">
+                            <div class="evolve-container">
+                                <img style="pointer-events: none;" src="images/phan-evo1.png" draggable="false">
+                                <img data-name="p6.1" src="images/donphan.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p6.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img1" src="images/donphan.png" draggable="false">
+                        <img class="elements3" src="images/ground.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>DONPHAN</h1>
+                        </div>
+                        <h2 id="ev3">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                Donphan is covered in tough hide, so even being hit by a car won’t faze this Pokémon. However, it is extremely susceptible to rain.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header3">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>3' 07"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspArmor</p><br>
+                            <p class="data-header3">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>264.6 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSturdy</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header3">TYPE</p><br>
+                            <P>Ground</P><br>
+                            <p class="data-header3">WEAKNESSES</p><br>
+                            <p>Water Grass Ice</p><br>
+                        </div>
+                        <div class="text-container4 evo3">
+                            <div class="evolve-container">
+                                <img data-name="p6" src="images/phan-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/donphan.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p7">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/shinx-evo1.png" draggable="false">
+                        <img class="elements4" src="images/electric.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>SHINX</h1>
+                        </div>
+                        <h2 id="ev4">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                The extension and contraction of its muscles generates electricity. It glows when in trouble.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header4">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 08"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFlash</p><br>
+                            <p class="data-header4">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>20.9 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIntimidate & Rivalry</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header4">TYPE</p><br>
+                            <P>Electric</P><br>
+                            <p class="data-header4">WEAKNESSES</p><br>
+                            <p>Ground</p><br>
+                        </div>
+                        <div class="text-container4 evo1">
+                            <div class="evolve-container">
+                                <img style="pointer-events: none;" src="images/shinx-evo1.png" draggable="false">
+                                <img data-name="p7.1" src="images/luxio.png" draggable="false">
+                                <img data-name="p7.2" src="images/luxray.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p7.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/luxio.png" draggable="false">
+                        <img class="elements4" src="images/electric.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>LUXIO</h1>
+                        </div>
+                        <h2 id="ev4">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                Strong electricity courses through the tips of its sharp claws. A light scratch causes fainting in foes.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header4">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>2' 11"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSpark</p><br>
+                            <p class="data-header4">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>67.2 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIntimidate & Rivalry</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header4">TYPE</p><br>
+                            <P>Electric</P><br>
+                            <p class="data-header4">WEAKNESSES</p><br>
+                            <p>Ground</p><br>
+                        </div>
+                        <div class="text-container4 evo1">
+                            <div class="evolve-container">
+                                <img data-name="p7" src="images/shinx-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/luxio.png" draggable="false">
+                                <img data-name="p7.2" src="images/luxray.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p7.2">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/luxray.png" draggable="false">
+                        <img class="elements4" src="images/electric.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>LUXRAY</h1>
+                        </div><h1 id='g4'>LUXRAY</h1>
+                        <h2 id="ev4">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                It can see clearly through walls to track down its prey and seek its lost young.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header4">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>4' 07"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGleam Eyes</p><br>
+                            <p class="data-header4">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>92.6 lbs lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIntimidate & Rivalry</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header4">TYPE</p><br>
+                            <P>Electric</P><br>
+                            <p class="data-header4">WEAKNESSES</p><br>
+                            <p>Ground</p><br>
+                        </div>
+                        <div class="text-container4 evo1">
+                            <div class="evolve-container">
+                                <img data-name="p7" src="images/shinx-evo1.png" draggable="false">
+                                <img data-name="p7.1" src="images/luxio.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/luxray.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p8">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/pichu-evo1.png" draggable="false">
+                        <img class="elements4" src="images/electric.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>PICHU</h1>
+                        </div>
+                        <h2 id="ev4">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                It is unskilled at storing electric power. Any kind of shock causes it to discharge energy spontaneously.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header4">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 00"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTiny Mouse</p><br>
+                            <p class="data-header4">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>4.4 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatic</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header4">TYPE</p><br>
+                            <P>Electric</P><br>
+                            <p class="data-header4">WEAKNESSES</p><br>
+                            <p>Ground</p><br>
+                        </div>
+                        <div class="text-container4 evo4">
+                            <div class="evolve-container">
+                                <img style="pointer-events: none;" src="images/pichu-evo1.png" draggable="false">
+                                <img data-name="p8.1" src="images/pikachu.png" draggable="false">
+                                <img data-name="p8.2" src="images/raichu.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p8.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/pikachu.png" draggable="false">
+                        <img class="elements4" src="images/electric.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>PIKACHU</h1>
+                        </div>
+                        <h2 id="ev4">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                When it is angered, it immediately discharges the energy stored in the pouches in its cheeks.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header4">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 04"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMouse</p><br>
+                            <p class="data-header4">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>13.2 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatic</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header4">TYPE</p><br>
+                            <P>Electric</P><br>
+                            <p class="data-header4">WEAKNESSES</p><br>
+                            <p>Ground</p><br>
+                        </div>
+                        <div class="text-container4 evo4">
+                            <div class="evolve-container">
+                                <img data-name="p8" src="images/pichu-evo1.png" draggable="false">
+                                <img  style="pointer-events: none;" src="images/pikachu.png" draggable="false">
+                                <img data-name="p8.2" src="images/raichu.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p8.2">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/raichu.png" draggable="false">
+                        <img class="elements4" src="images/electric.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>RAICHU</h1>
+                        </div>
+                        <h2 id="ev4">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                Its tail discharges electricity into the ground, protecting it from getting shocked.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header4">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>2' 07"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMouse</p><br>
+                            <p class="data-header4">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>66.1 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatic</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header4">TYPE</p><br>
+                            <P>Electric</P><br>
+                            <p class="data-header4">WEAKNESSES</p><br>
+                            <p>Ground</p><br>
+                        </div>
+                        <div class="text-container4 evo4">
+                            <div class="evolve-container">
+                                <img data-name="p8" src="images/pichu-evo1.png" draggable="false">
+                                <img data-name="p8.1" src="images/pikachu.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/raichu.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p9">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/vul-evo1.png" draggable="false">
+                        <img class="elements5" src="images/fire.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>VULPIX</h1>
+                        </div>
+                        <h2 id="ev5">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                While young, it has six gorgeous tails. When it grows, several new tails are sprouted.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header5">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>2' 00"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFox</p><br>
+                            <p class="data-header5">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>21.8 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFlash Fire</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header5">TYPE</p><br>
+                            <P>Fire</P><br>
+                            <p class="data-header5">WEAKNESSES</p><br>
+                            <p>Water Ground Rock</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo5">
+                                <img style="pointer-events: none;" src="images/vul-evo1.png" draggable="false">
+                                <img data-name="p9.1" src="images/ninetales.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p9.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/ninetales.png" draggable="false">
+                        <img class="elements5" src="images/fire.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>NINETALES</h1>
+                        </div>
+                        <h2 id="ev5">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                It is said to live 1,000 years, and each of its tails is loaded with supernatural powers.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header5">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>3' 07"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFox</p><br>
+                            <p class="data-header5">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>43.9 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFlash Fire</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header5">TYPE</p><br>
+                            <P>Fire</P><br>
+                            <p class="data-header5">WEAKNESSES</p><br>
+                            <p>Water Ground Rock</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo5">
+                                <img data-name="p9" src="images/vul-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/ninetales.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p10">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/scor-evo1.png" draggable="false">
+                        <img class="elements5" src="images/fire.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>SCORBUNNY</h1>
+                        </div>
+                        <h2 id="ev5">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                A warm-up of running around gets fire energy coursing through this Pokémon’s body. Once that happens, it’s ready to fight at full power.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header5">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>1' 00"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRabbit</p><br>
+                            <p class="data-header5">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>9.9 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBlaze</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header5">TYPE</p><br>
+                            <P>Fire</P><br>
+                            <p class="data-header5">WEAKNESSES</p><br>
+                            <p>Water Ground Rock</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo5">
+                                <img style="pointer-events: none;" src="images/scor-evo1.png" draggable="false">
+                                <img data-name="p10.1" src="images/raboot.png" draggable="false">
+                                <img data-name="p10.2" src="images/cinderace.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p10.1">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/raboot.png" draggable="false">
+                        <img class="elements5" src="images/fire.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>RABOOT</h1>
+                        </div>
+                        <h2 id="ev5">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                Its thick and fluffy fur protects it from the cold and enables it to use hotter fire moves.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header5">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>2' 00"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRabbit</p><br>
+                            <p class="data-header5">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>19.8 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBlaze</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header5">TYPE</p><br>
+                            <P>Fire</P><br>
+                            <p class="data-header5">WEAKNESSES</p><br>
+                            <p>Water Ground Rock</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo5">
+                                <img data-name="p10" src="images/scor-evo1.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/raboot.png" draggable="false">
+                                <img data-name="p10.2" src="images/cinderace.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" data-target="p10.2">
+                    <i class="fas fa-times"></i>
+                    <img class="bg" src="images/popupbg.png" draggable="false">
+                    <div class="content">
+                        <img class="evo-img" src="images/cinderace.png" draggable="false">
+                        <img class="elements5" src="images/fire.png" draggable="false">
+                        <div class="name-container">  
+                            <h1>CINDERACE</h1>
+                        </div>
+                        <h2 id="ev5">EVOLUTION</h2>
+                        <div class='text-container1'>
+                            <p>
+                                It juggles a pebble with its feet, turning it into a burning soccer ball. Its shots strike opponents hard and leave them scorched.
+                            </p>
+                        </div>
+                        <div class='text-container2'>
+                            <p class="data-header5">HEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORY</p><br>
+                            <p>4' 07"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStriker</p><br>
+                            <p class="data-header5">WEIGHT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspABILITIES</p><br>
+                            <p>72.8 lbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBlaze</p><br>
+                        </div>
+                        <div class='text-container3'>
+                            <p class="data-header5">TYPE</p><br>
+                            <P>Fire</P><br>
+                            <p class="data-header5">WEAKNESSES</p><br>
+                            <p>Water Ground Rock</p><br>
+                        </div>
+                        <div class="text-container4">
+                            <div class="evolve-container evo5">
+                                <img data-name="p10" src="images/scor-evo1.png" draggable="false">
+                                <img data-name="p10.1" src="images/raboot.png" draggable="false">
+                                <img style="pointer-events: none;" src="images/cinderace.png" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section> 
+        <section class="characters">
+            <div class="trainers-container">
+                <img class="background3" src="images/background3.png" draggable="false">
+                <div class="pokeball-bg">
+                    <div class="slider component1"></div>
+                    <div class="slider component2"></div>
+                    <div class="slider component3"></div>
+                    <div class="slider component4"></div>
+                </div>
+                <div class="trainers">
+                    <img data-name="trainer1" src="images/jacqicon.png" draggable="false">
+                    <img data-name="trainer2" src="images/renicon.png" draggable="false">
+                    <img data-name="trainer3" src="images/yellowicon.png" draggable="false">
+                    <img data-name="trainer4" src="images/kaiicon.png" draggable="false">
+                </div>
+                <div class="trainer" id="trainer1" data-target="trainer1">
+                    <div class="contents">
+                        <img id="jacq" src="images/jacq.png" draggable="false">
+                        <img id="dark" src="images/darkrai.png" draggable="false">
+                    </div>
+                </div>
+                <div class="trainer" id="trainer2" data-target="trainer2">
+                    <div class="contents">
+                        <img id="ren" src="images/ren.png" draggable="false">
+                        <img id="sui" src="images/suicune.png" draggable="false">
+                    </div>
+                </div>
+                <div class="trainer" id="trainer3" data-target="trainer3">
+                    <div class="contents">
+                        <img id="yellow" src="images/yellow.png" draggable="false">
+                        <img id="jira" src="images/jirachi.png" draggable="false">
+                    </div>
+                </div>
+                <div class="trainer" id="trainer4" data-target="trainer4">
+                    <div class="contents">
+                        <img id="kai" src="images/kai.png" draggable="false">
+                        <img id="zap" src="images/zapdos.png" draggable="false">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

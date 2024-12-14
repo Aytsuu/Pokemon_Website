@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 300vh;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+.intro{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(53, 53, 53);
+    transition: 1s;
+    z-index: 1000;
+}
+.pokeball{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translateX(-50%);
+    & img{
+        width: 70px;
+        display: inline-block;
+        position: relative;
+    }
+}
+.ball{
+    bottom: -20px;
+    opacity: 0;
+}
+.ball.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.ball.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+.background{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: block;
+    z-index: -100;
+}
+.background2{
+    min-height: 100vh;
+    width: 100%;
+    position: block;
+    top: 100%;
+    z-index: -100;
+}
+.logo{
+    position: absolute;
+    top: 25%;
+    left: 28%;
+}
+.logo > img{
+    width: 70%;
+    height: 65%;
+}
+.container{
+    width: 150px;
+    height:550px;
+    border: 4px solid;
+    border-image-source: linear-gradient(160deg,rgb(136, 239, 243),rgb(55, 138, 69));
+    border-image-slice: 1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.048),rgba(0, 0, 0, 0.041)),url(images/pokemonbg.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;   
+    cursor: pointer;
+    opacity: 0;
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container.appear{
+    opacity: 1;
+}
+.image-containers{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    top: 130%;
+    left: 5%;
+}
+.container:hover{
+    transform: translateY(-5%);
+}
+.symbol-container1{
+    position: absolute;
+    padding: 0 0 0 1.5rem;
+    top: 90%;
+
+    & img{
+        width: 100px;
+        height: 125px;
+    }
+}
+.symbol-container2{
+    position: absolute;
+    padding: 0 0 0 1.5rem;
+    top: 88%;
+
+    & img{
+        width: 90px;
+        height: 120px;
+    }
+}
+.symbol-container3{
+    position: absolute;
+    padding: 0 0 0 1.5rem;
+    top: 90%;
+
+    & img{
+        width: 90px;
+        height: 120px;
+    }
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    z-index: 500;
+    display: none;
+    & .bg{ 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 90%;
+        width: 85%;
+    }
+}
+.fa-times{
+    position: absolute;
+    top: 4.5rem;
+    right: 10.9rem;
+    cursor: pointer;
+    color: #B0C4DE;
+    font-size: 1.1rem;
+    z-index: 100;
+}
+.popup.active{
+    animation: fade-in 400ms forwards;
+    display: block;
+}
+.content{
+    position: absolute;
+    height: 90%;
+    width: 85%;
+}
+.name-container{
+    position: absolute;
+    width: 10.5%;
+    height: 85%;
+    top:10%;
+    left: 10%;
+    & h1{
+        position: absolute;
+        color: white;
+        font-size: 5.3rem;
+        font-weight: 900;
+        letter-spacing: 0.3rem;
+        font-family: sans-serif;
+        transform: rotate(270deg);
+        transform-origin: 0 0;
+        top: 95%;
+        left: 50.5%;
+    }
+    & #h1-1{
+        top: 102%;
+    }
+}
+.popup-pokemon{
+    position: absolute;
+    top: 2rem;
+    left: 12rem;
+    z-index: 100;
+}
+.elements1{
+    position: absolute;
+    top: 11rem;
+    left: 26.5rem;
+    animation: downscale 1.5s forwards;
+
+}
+.elements2{
+    position: absolute;
+    top: 11rem;
+    left: 28.5rem;
+    animation: downscale 1.5s forwards;
+}
+.elements3{
+    position: absolute;
+    top: 11rem;
+    left: 28.6rem;
+    animation: downscale 1.5s forwards;
+}
+.elements4{
+    position: absolute;
+    top: 11rem;
+    left: 28rem;
+    animation: downscale 1.5s forwards;
+}
+.elements5{
+    position: absolute;
+    top: 11rem;
+    left: 27.9rem;
+    animation: downscale 1.5s forwards;
+}
+.text-container1{
+    position: absolute;
+    top: 18%;
+    right: -0.5%;
+    width: 750px;
+    height: 130px;
+    border-radius: 5px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));    
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    & p{
+        position: absolute;
+        text-align: justify;
+        font-weight: bold;
+        font-size: 1rem;
+        font-family: 'Quicksand', sans-serif;
+        margin: 3rem;     
+    }
+}
+.text-container2{
+    position: absolute;
+    top: 34%;
+    right: 16.3%;
+    width: 480px;
+    height: 250px;
+    border-radius: 5px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));    
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    line-height: 3;
+    backdrop-filter: blur(3px);
+    & p{
+        position: absolute;
+        text-align: left;
+        font-weight: bold;
+        font-size: 1rem;
+        font-family: 'Quicksand', sans-serif;
+        margin: 3rem;
+        line-height: 1.5rem;
+    }
+}
+.text-container3{
+    position: absolute;
+    top: 34%;
+    right: -0.5%;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));    
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    line-height: 3;
+    backdrop-filter: blur(3px);
+    & p{
+        position: absolute;
+        text-align: left;
+        font-weight: bold;
+        font-size: 1rem;
+        font-family: 'Quicksand', sans-serif;
+        margin: 3rem;
+        line-height: 1.5rem;
+    }
+}
+.text-container4{
+    position: absolute;
+    top: 66%;
+    right: -0.5%;
+    width: 750px;
+    height: 250px;
+    border-radius: 5px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));    
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    line-height: 4;
+    backdrop-filter: blur(3px);
+    
+}
+.evolve-container{
+    display: flex;
+    gap: 4rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 20%;
+    left: 10%;
+    & img{
+        border: 5px solid rgb(255, 255, 255);
+        border-radius: 50%;
+        width: 20%;
+        height: 60%;
+        cursor: pointer;
+        transition: all 1s;
+    }
+}
+
+.evo-img{
+    position: absolute;
+    top: 44%;
+    left: 19%;
+    z-index: 100;
+}
+
+.evo-img1{
+    position: absolute;
+    top: 51.5%;
+    left: 19%;
+    z-index: 100;
+}
+
+h2{
+    position: absolute;
+    font-size: 1.7rem;
+    font-family: sans-serif;
+    font-weight:900;
+    top: 63.8%;
+    right: 17%;
+    z-index: 100;
+
+}
+.evo1 img:hover{
+    background-color: rgb(2, 128, 2);
+}
+.evo2 img:hover{
+    background-color: rgb(0, 119, 199);
+}
+.evo3 img:hover{
+    background-color: rgb(194, 134, 56);
+}
+.evo4 img:hover{
+    background-color: rgb(187, 187, 0);
+}
+.evo5 img:hover{
+    background-color: rgb(168, 0, 0);
+}
+.data-header1,#ev1{
+    color: rgb(2, 128, 2);
+}
+.data-header2,#ev2{
+    color: rgb(0, 119, 199);
+}
+.data-header3,#ev3{
+    color: rgb(194, 134, 56);
+}
+.data-header4,#ev4{
+    color: rgb(187, 187, 0);
+}
+.data-header5,#ev5{
+    color: rgb(168, 0, 0);
+}
+.crystal-ball{
+    position: absolute;
+    left: 47.5%;
+    top: 104%;
+    width: 5%;
+    animation: rotation 1.5s linear infinite;
+    z-index: 2;
+}
+.fi-rr-music-note{
+    position: absolute;
+    font-size: 1.4em;
+    border-radius: 3px;
+    border: 2px solid rgba(112, 112, 112, 0.5);
+    color: rgba(112, 112, 112, 0.5);
+    top: 3rem;
+    right: 3rem;
+    padding: 0.3rem;
+    cursor: pointer;
+
+}
+.background3{
+    position: block;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+}
+.pokeball-bg{
+    position: absolute;
+    top: 200%;
+}
+.component1{
+    position: absolute;
+    transform: translateY(30%);    
+    left: 36rem;
+    background-color: #D3D3D3;
+    opacity: 0;
+    width: 800px;
+    height: 410px;
+    border-radius: 0;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    transition: all 500ms ease-in;
+} 
+ .component2{
+    position: absolute;
+    top: 34rem;
+    left: 56rem;
+    background-color: #D3D3D3;
+    opacity: 0;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    z-index: 50;
+} 
+.component2{
+    transform: scale(1.5,1.5);
+    transition: all 500ms ease-in;
+}
+.component3{
+    position: absolute;
+    top: 37rem;
+    left: 70rem;
+    background-color: #c0c0c0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 100;
+    opacity: 0;
+    transition: all 500ms ease-in;
+}
+.component4{
+    position: absolute;
+    transform: translateY(175%);
+    left: 36rem;
+    background-color: #ecebeb;
+    opacity: 0;
+    width: 800px;
+    height: 390px;
+    border-radius: 0;
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    transition: all 500ms ease-in;
+}
+
+.component1.appear{
+    transform: translateY(50%);
+    opacity: 30%;
+}
+.component2.appear{
+    transform: scale(1,1);
+    opacity: 40%;
+}
+.component3.appear{
+    left: 58.8rem;
+    opacity: 50%;
+}
+.component4.appear{
+    transform: translateY(162%);
+    opacity: 30%;
+}
+
+.trainers{
+    position: absolute;
+    display: flex;
+    gap: 3rem;
+    top: 209%;
+    left: 37%;
+}
+.trainers img{
+    width: 7%;
+    border: 2px solid #ffffff;
+    background-color: #D2EBF2;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 300;
+    transition: all 400ms ease-in;
+}
+.trainers img.appear{
+    opacity: 1;
+}
+
+.contents{
+    position: absolute;
+    width: 1000px;
+    top: 200%;
+}
+#trainer1{
+    & #jacq{
+        position: absolute;
+        top: 17rem;
+        left: 38rem;
+        width: 36%;
+        z-index: 150;
+    }
+    & #dark{
+        position: absolute;
+        top: 7rem;
+        left: 50rem;
+        width: 55%;
+        z-index: 100;
+    }
+}
+#trainer2{
+    display: none;
+    & #ren{
+        position: absolute;
+        top: 17rem;
+        left: 60rem;
+        width: 36%;
+        z-index: 150;
+    }
+    & #sui{
+        position: absolute;
+        top: 32rem;
+        left: 40rem;
+        width: 55%;
+        z-index: 100;
+    }
+}
+#trainer3{
+    display: none;
+    & #yellow{
+        position: absolute;
+        top: 17rem;
+        left: 50rem;
+        width: 36%;
+        z-index: 150;
+    }
+    & #jira{
+        position: absolute;
+        top: 13rem;
+        left: 51rem;
+        width: 30%;
+        z-index: 100;
+    }
+}
+#trainer4{
+    display: none;
+    & #kai{
+        position: absolute;
+        top: 17rem;
+        left: 45rem;
+        width: 36%;
+        z-index: 150;
+    }
+    & #zap{
+        position: absolute;
+        top: 14rem;
+        left: 51rem;
+        width: 60%;
+        z-index: 100;
+    }
+}
+
+@keyframes rotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes downscale{
+    0%{
+        transform: scale(3,3);
+    }
+    30%{
+        transform: scale(1,1);
+    }
+}
